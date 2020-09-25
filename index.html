@@ -5,17 +5,17 @@
     <meta charset="UTF-8">
     <title>猎天使魔女</title>
     <style>
-       * {
+    * {
     margin: 0;
     padding: 0;
 }
 
 .content {
-    width: auto;
+    width: 100%;
     height: 600px;
     background-image: url(http://i1.fuimg.com/727097/72b182817ed7bb09.jpg);
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: center ;
     background-size: cover;
     background-attachment: fixed;
     display: flex;
@@ -28,6 +28,7 @@
   width:100px;
    animation: img-rotate 10s infinite linear;
 }
+
 @keyframes img-rotate{
  from {
 		transform: rotate(0deg);
@@ -66,6 +67,13 @@
     font-style: italic;
     text-shadow: 2px 2px 2px #95929B;
     text-transform: uppercase;
+}
+#img-3{
+  height:100px;
+  width:100px;
+  display:flex;
+align-self:center;
+  justify-content:center;
 }
 #vedio{
   padding:30px;
@@ -124,6 +132,11 @@
 }
 
 @media (max-width : 1000px) {
+  .content {
+  background-color:rgb(23,3,4);
+    background-size: 1000px;
+   
+}
     .card {
         width: auto;
         flex-direction: column;
@@ -137,10 +150,28 @@
     }
 
 }
+@media (max-width:768px){
+  .content {
+    background-color:rgb(23,3,4);
+    background-size: 768px;
+   
+}  
+   .card {
+        width: auto;
+        flex-direction: column;
+        text-align: center;
+    }
+    .card .right img {
+        padding: 25px;
+    }
+    .card .left {
+        padding: 15px;
+    }
+}
 /* end */
 .end {
     width: 100%;
-    height: 600px;
+    height:600px;
     background-image: url(http://i1.fuimg.com/727097/0dd38ce395d4e64a.jpg);
     background-position: center;
     background-size: cover;
@@ -150,7 +181,7 @@
 }
 footer {
     text-align: center;
-    height: 200px;
+    height: 100px;
     background:rgb(23,3,4);
     display: flex;
     justify-content: center;
@@ -159,11 +190,12 @@ footer {
 }
 footer .p {
     font-size: 35px;
-    padding: 20px;
+    padding: 5px;
 }
 footer .p a {
     color: #AED3DE;
 }
+
 
     </style>
 </head>
@@ -188,7 +220,7 @@ footer .p a {
     </div>
   </div>
   <div class="text">
-  
+  <img id="img-3" src="https://giffiles.alphacoders.com/209/209528.gif" alt="">
   <p>Aru farl bamah!</p>
   </div>
   <div class="movies">
