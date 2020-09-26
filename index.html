@@ -21,7 +21,7 @@
       header {
         display: flex;
         flex-direction: row;
-        justify-content: flex-end;
+        justify-content:space-between ;
         background-color: #151515;
         position: fixed;
         top: 0;
@@ -45,6 +45,22 @@
         text-decoration: none;
         color: #bdbdbd;
       }
+	    #welcome-text{
+     margin-left:5rem;
+     margin-right:2rem;
+     align-self:center;
+     font-size: 30px;
+     color: #bdbdbd;
+     font-family: "Zhi Mang Xing", cursive;
+     animation:text-blink 3s ;  
+}
+@keyframes text-blink{
+  0%{
+    opacity:0;
+  }100%{
+    opacity:1;
+  }
+}
       #welcome-section {
         display: none;
         background-color: #bdbdbd;
@@ -275,12 +291,14 @@
       }
     </style>
     <script>
-      function change(){
+    function change(){
   var x = document.getElementById("welcome-section");
+  var y =   document.getElementById("welcome-text");
+  y.style.visibility ="hidden";
   if(x.style.display == "block"){
     x.style.display = "none";
   }else{
-    x.style.display = "block";  
+    x.style.display = "block"; 
   }
 }
     </script>
@@ -288,6 +306,9 @@
   </head>
   <body>
 <header>
+	<div id="welcome-text">
+  <p>点击下面按钮</p>
+    </div>
   <nav id="navbar">
     <ul>
       <li><a class="contact" href="#welcome-section">关于</a></li>
@@ -296,6 +317,7 @@
     </ul>
   </nav>
 </header>
+	  
 <section id="welcome-section">
   <div id="div-main">
     <div id="main">
