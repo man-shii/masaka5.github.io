@@ -7,7 +7,7 @@
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
     <style>
-    * {
+   * {
         margin: 0;
         padding: 0;
       }
@@ -46,15 +46,16 @@
         color: #bdbdbd;
       }
       #welcome-section {
-        display: flex;
+        display: none;
         background-color: #bdbdbd;
         background-image: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1601102897901&di=888dc651f47ff5df166d5ad417f7fc97&imgtype=0&src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2Fc%2F5785eaaa59bec.jpg);
         background-size: cover;
         background-attachment: fixed;
-        margin-top: 4rem;
+        margin-top:4rem;
         width: 100%;
         height: auto;
         color: #bdbdbd;
+       
       }
       #div-main {
         display: flex;
@@ -72,10 +73,11 @@
         align-items: center;
         background-color: #151515;
         width: 80%;
-        height: 40%;
+        height: 300px;
         border: 1px solid #bdbdbd;
         border-radius: 10%;
-        margin: 5% 0;
+        margin:2rem 0;
+        
       }
       #content {
         display: flex;
@@ -105,9 +107,12 @@
         text-align: center;
         background-color: #151515;
         width: 80%;
-        height: 60%;
+        height: 500px;
         border: 1px solid #bdbdbd;
         border-radius: 10%;
+       margin-bottom:4rem;
+        
+        
       }
       #projects > div {
         margin: 10px;
@@ -238,6 +243,10 @@
         justify-content: space-between;
         align-items: center;
         background-color: #151515;
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom:0;
       }
       
       footer > ul {
@@ -266,19 +275,13 @@
       }
     </style>
     <script>
-       function change(){
-   var x =document.getElementById("projects");
-  var y = document.getElementById("main");
-  var z = document.getElementById("welcome-section");
-  if(x.style.display == "flex" ||   y.style.display == "flex"){
+      function change(){
+  var x = document.getElementById("welcome-section");
+  if(x.style.display == "block"){
     x.style.display = "none";
-    y.style.display = "none";
-    z.style.display = "none";
-   }else{
-    x.style.display = "flex";
-    y.style.display = "flex";
-    z.style.display = "block";
-   }
+  }else{
+    x.style.display = "block";  
+  }
 }
     </script>
       
