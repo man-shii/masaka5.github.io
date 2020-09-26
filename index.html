@@ -4,8 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <title>猎天使魔女</title>
+<script>
+		function blink(number){
+  var x =document.getElementById("img-"+number);
+  x.classList.toggle("hide");
+}
+</script>
     <style>
-    *{
+  *{
   margin:0;
   padding:0;
 }
@@ -47,7 +53,7 @@
   background:rgb(0,0,7);
 }
 
-#nav-bar >.nav-link{
+#nav-bar >.contact{
   display:flex;
   flex-direction:column;
   justify-content:center;
@@ -55,22 +61,42 @@
   font-size:20px;
   margin:0 3rem;
 }
-.contact:hover{
+.nav-link:hover{
   background:rgb(255,254,255);
 }
 .img-logo{
   height:30px;
   width:30px;
-  animation:img-blink 1s infinite;
+  opacity:0; 
+}
+#img-1{
+  height:30px;
+  width:30px;
+  opacity:0; 
+}
+#img-2{
+  height:30px;
+  width:30px;
+  opacity:0; 
+}
+#img-3{
+  height:30px;
+  width:30px;
+  opacity:0; 
+
+}
+.hide{
+  animation:img-blink 1s;
 }
 @keyframes img-blink{
   0%{
-    opacity:0;
-  }100%{
     opacity:1;
+  }100%{
+    opacity:0;
   }
 }
-.contact{
+
+.nav-link{
   text-decoration:none;
   color:rgb(164,103,243);
 }
@@ -97,6 +123,9 @@ main > div{
   margin:2rem 5rem;
   align-self:center;
   text-align:center;
+}
+#content > h1 {
+  padding-bottom:4rem;
 }
 .content > h2,p{
   text-align:center;
@@ -141,7 +170,7 @@ footer{
   background:black;
 }
 @media screen and (max-width:768px){
-  #nav-bar > .nav-link{
+  #nav-bar > .contact{
     margin: 0 1rem;
   }
   
@@ -161,17 +190,17 @@ footer{
 <header id="header">
   <img id="header-img" src="https://i1.fuimg.com/727097/d72bd42202131ddd.jpg" alt="" />
   <nav id="nav-bar">
-    <nav class="nav-link">
-      <img class="img-logo" src="http://i1.fuimg.com/727097/618384d207c3b5ef.jpg" alt="" />
-      <a class="contact" href="#">首页</a>
+    <nav class="contact">
+      <img id="img-1"  class="img-logo" src="http://i1.fuimg.com/727097/618384d207c3b5ef.jpg" alt="" />
+      <a class="nav-link" href="#video" onmouseover="blink(1)" onmouseout="blink(1)">首页</a>
     </nav>
-    <nav class="nav-link">
-      <img class="img-logo" src="http://i1.fuimg.com/727097/618384d207c3b5ef.jpg" alt="" />
-       <a class="contact" href="#video">介绍</a>
+    <nav class="contact">
+      <img id="img-2"  class="img-logo" src="http://i1.fuimg.com/727097/618384d207c3b5ef.jpg" alt="" />
+       <a class="nav-link" href="#content" onmouseover="blink(2)" onmouseout="blink(2)">关于</a>
     </nav>
-    <nav class="nav-link">
-      <img class="img-logo" src="http://i1.fuimg.com/727097/618384d207c3b5ef.jpg" alt="" />
-       <a class="contact" href="#email">支持</a>
+    <nav class="contact">
+      <img id="img-3" class="img-logo" src="http://i1.fuimg.com/727097/618384d207c3b5ef.jpg" alt="" />
+       <a class="nav-link" href="#email" onmouseover="blink(3)" onmouseout="blink(3)">支持</a>
     </nav>
     </nav>
   </header>
@@ -199,14 +228,13 @@ footer{
     </div>
   </div>
   
-  <form id="form" action="https://www.freecodecamp.com/email-submit">
+  <form id="form" method="POST" action="https://www.freecodecamp.com/email-submit">
     <label for="email"> 邮箱：</label>
-    <input id="email" type="email" name="mail" placeholder="请在这里输入" required >
+    <input id="email" type="email" name="email" placeholder="请在这里输入" required >
     <input id="submit" type="submit" name= "submit" value="提交" >
     </form>
   </main>
 <audio loop="loop" autoplay="autoplay" >
-  <source src="https://vgmdownloads.com/soundtracks/bayonetta/emhkgbog/1-08.%20Fly%20Me%20To%20The%20Moon%20%28%E2%88%9E%20Climax%20Mix%29.mp3" type="audio/ogg">
   <source src="https://vgmdownloads.com/soundtracks/bayonetta/xrmuqkkz/2-25.%20After%20Burner%20%28%E2%88%9E%20Climax%20Mix%29.mp3" type="audio/ogg" >
 </audio>
 <footer><p>By masaka</p>
