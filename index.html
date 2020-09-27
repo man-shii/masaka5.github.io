@@ -12,9 +12,8 @@
         padding: 0;
       }
       body {
-        background-color: #bdbdbd;
-        background-image: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1601102897901&di=888dc651f47ff5df166d5ad417f7fc97&imgtype=0&src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2Fc%2F5785eaaa59bec.jpg);
-      
+        background-color: #151515;
+        background-image: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1601102897901&di=888dc651f47ff5df166d5ad417f7fc97&imgtype=0&src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2Fc%2F5785eaaa59bec.jpg);     
         background-size: cover;
         background-attachment: fixed;
       }
@@ -66,7 +65,6 @@
         background-color: #bdbdbd;
         background-image: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1601102897901&di=888dc651f47ff5df166d5ad417f7fc97&imgtype=0&src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2Fc%2F5785eaaa59bec.jpg);
         background-size: cover;
-        background-attachment: fixed;
         margin-top:4rem;
         width: 100%;
         height: auto;
@@ -284,8 +282,8 @@
       }
       
       @media screen and (max-width: 768px) {
-	      body{
-          background-image: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1601176751701&di=02172207e63d19d9410491014bf3d02d&imgtype=0&src=http%3A%2F%2Fpic.90sjimg.com%2Fback_pic%2Fqk%2Fback_origin_pic%2F00%2F01%2F79%2F9f1e80009d552fe5544f9c0c2e0be4be.jpg);
+	     body{
+          background-image: url(https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1204955123,1649219489&fm=26&gp=0.jpg);
            
         }
         #welcome-section {
@@ -300,14 +298,16 @@
     <script>
     function change(){
   var x = document.getElementById("welcome-section");
-  var y =   document.getElementById("welcome-text");
+  var y =   document.getElementById("welcome-text"); 
   y.style.visibility ="hidden";
   if(x.style.display == "block"){
-    x.style.display = "none";
+    x.style.display = "none"; document.body.style.backgroundImage="url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1601102897901&di=888dc651f47ff5df166d5ad417f7fc97&imgtype=0&src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2Fc%2F5785eaaa59bec.jpg)";
   }else{
     x.style.display = "block"; 
+   document.body.style.backgroundImage="none";
   }
 }
+
     </script>
       
   </head>
